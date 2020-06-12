@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PesoIdeal</string>
+    <string name="consultar">Consulta si estas en tu peso ideal!</string>
+    <string name="sobrepeso">Tienes unos kilitos de más, por tu salud intenta bajar.</string>
+    <string name="pesoideal">Estas en tu peso ideal, sigue asi!</string>
+    <string name="bajopeso">Estas bajo de peso, deberias intentar subir por tu salud.</string>
+</resources>
