@@ -9,17 +9,37 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView msgTextView;
     EditText pesoView;
     EditText alturaView;
+    private InterstitialAd mInterstitialAd;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+
 
         Button consultarButton;
         consultarButton = (Button) findViewById(R.id.consultarButton);
@@ -45,7 +65,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(pesoView.getText().length() != 0 && alturaView.getText().length() != 0){
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                } else {
+                    //Log.d("TAG", "The interstitial wasn't loaded yet.");
+                }
+
+
+                //if(pesoView.getText().length() != 0 && alturaView.getText().length() != 0 && !pesoView.getText().equals(".") && !alturaView.getText().equals(".")){
+                if(checkFloat(pesoView) && checkFloat(alturaView)){
 
                     Double bmi = CalcularBmi(Float.valueOf(pesoView.getText().toString()),Float.valueOf(alturaView.getText().toString()));
                     if(bmi>25){
@@ -70,6 +98,15 @@ public class MainActivity extends AppCompatActivity {
     public Double CalcularBmi(float peso, float altura){
         Double bmi = (peso / (Math.pow(altura, 2)));
         return bmi;
+    }
+
+    public boolean checkFloat(EditText value) {
+        try {
+            Float.valueOf(value.getText().toString());
+        } catch(NumberFormatException e) {
+            return false;
+        }
+        return true;
     }
 
 }
