@@ -4,4 +4,14 @@
     <string name="sobrepeso">Tienes unos kilitos de más, por tu salud intenta bajar.</string>
     <string name="pesoideal">Estas en tu peso ideal, sigue asi!</string>
     <string name="bajopeso">Estas bajo de peso, deberias intentar subir por tu salud.</string>
+    <string name="Titulo">¿Cual es tu peso Ideal?</string>
+    <string name="desc_imagenpeso">Imagen Peso</string>
+    <string name="indicanos_tu_peso">Indicanos tu peso</string>
+    <string name="valor_peso">0.0</string>
+    <string name="kilogramos">kilogramos</string>
+    <string name="metros">metros</string>
+    <string name="indicanos_tu_altura">Indicanos tu altura</string>
+    <string name="boton_consultar">Consultar</string>
+    <string name="resultado">Consulta tu peso ideal!</string>
+    <string name="valor_altura">0.0</string>
 </resources>
