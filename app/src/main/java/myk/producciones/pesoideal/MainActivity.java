@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
         mInterstitialAd = new InterstitialAd(this);
         // Prueba ca-app-pub-3940256099942544/1033173712
-        //mInterstitialAd.setAdUnitId("ca-app-pub-9391440864407001/5977530151");
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        //mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.setAdUnitId("ca-app-pub-9391440864407001/5977530151");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
         mInterstitialAd.setAdListener(new AdListener() {

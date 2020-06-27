@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">" IdealWeight"</string>
+    <string name="consultar">Check if you are at your ideal weight!</string>
+    <string name="sobrepeso">You have a few extra pounds, for your health try to go down.</string>
+    <string name="pesoideal">" You are at your ideal weight, keep it up!"</string>
+    <string name="bajopeso">You are underweight, you should try to go up for your health.</string>
+    <string name="Titulo">" Which is your ideal weight?"</string>
+    <string name="desc_imagenpeso">" Image Weight"</string>
+    <string name="indicanos_tu_peso">" Tell us your weight"</string>
+    <string name="valor_peso">0.0</string>
+    <string name="kilogramos">kilograms</string>
+    <string name="metros">" meters"</string>
+    <string name="indicanos_tu_altura">" Tell us your height"</string>
+    <string name="boton_consultar">Consult</string>
+    <string name="resultado">" Check your ideal weight!"</string>
+    <string name="valor_altura">0.0</string>
+</resources>
